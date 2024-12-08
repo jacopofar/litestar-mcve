@@ -1,19 +1,15 @@
 from datetime import datetime
 
-from litestar import Router, post, Request
-from litestar.datastructures import State
+from litestar import Router, post
 
 
 
 @post("/log")
 async def log(
-    data: dict[str, str], request: Request[None, None, State], headers: dict[str, str]
+    data: dict[str, str], headers: dict[str, str]
 ) -> dict[str, bool]:
     data["received_at"] = datetime.now().isoformat()
-    logger = request.app.logger
-    logger.info(data)
-    assert logger is not None
-    logger.info(f"Received log data: {data}")
+    print(data)
     return dict(ok=True)
 
 
