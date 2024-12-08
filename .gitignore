@@ -1,0 +1,37 @@
+# my own notes
+notes.md
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# mypy
+.mypy_cache/
+
+# Virtual environments
+.venv
+
+# static site (generated)
+static_site/
+
+# static data (also gnerated)
+static_data/
+
+# data ( scraped, downloaded, etc)
+data/
+
+# local docker compose volumes
+docker_static_site/
+frontend_build/
+
+# scheduler file
+scheduler.db
+
+# dotenv
+.env
+
+# bundle file
+app.bundle
